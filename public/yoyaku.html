@@ -19,6 +19,17 @@
     left:312px;
     top:67px;
     } 
+    .btn--orange,
+.btn {
+  color: #fff;
+  background-color: #eb6100;
+  
+}
+.btn:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
   </style>
 </head>
 <body>
@@ -26,11 +37,27 @@
   <table>
   <tr>
     <td>6Fラウンジ</td>
-    <td><button onclick="location.href='public/reservecheck.html'">予約する</button> </td>
-    <td><a href=reservecheck>予約する</a></td>
+  
+ <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
+    
+    <td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>
   </tr>
   </table>
   </div>
+   <!--以下ボタン-->
+  <script type="text/javascript">
+    function btnClick(reserve){
+      
+  var change=document.getElementById('reserve');
+      change.textContent
+       = '予約不可';
+      change.style.backround = '#ffcccc';
+      
+      //予約するの言葉を予約不可に変えたうえで、赤色に変更するイメージかな
+      //書き方がなんか違うきがする...
+    }
+</script>
+
 </body>
 </html>
 
