@@ -40,18 +40,19 @@ a.btn--orange:hover {
     <td><%- results[i].name %></td>
   
  <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
-    
 
-    
-    <td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>
+    <!--<td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>-->
     <td>
-      <a href=reservecheck/<%- results[i].id %>><%- results[i].id %></a>
+      <a href=reservecheck/<%- results[i].id %>>予約する</a>
     </td>
   </tr>
       <% } %>
   </table>
   </div>
    <!--以下ボタン-->
+    <!--<form>
+        <button type="reserve">予約する</button>
+      </form>-->  
   <script type="text/javascript">
     function btnClick(reserve){
       
@@ -63,7 +64,8 @@ a.btn--orange:hover {
  
     }
 </script>
-
+<!--<button id = rireki onclick="location.href='rireki'">予約履歴確認</button>-->
+<a href=rireki>予約履歴確認</a>
 </body>
 </html>
 

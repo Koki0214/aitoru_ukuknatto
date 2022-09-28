@@ -47,6 +47,16 @@ app.get('/reservecheck/:id',(req,res)=> {
   })
 });
 
+app.get('/rireki',(req,res)=> {
+  const query = "select name from book where status=0";
+  
+  db.all(query,(err,rows)=>{
+    if(err){
+      console.log(err.message);
+    }
+    res.render("rireki.ejs",{results:rows});
+  })
+});
 
 
 app.listen(port, () => 

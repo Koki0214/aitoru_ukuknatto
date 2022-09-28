@@ -19,9 +19,14 @@
 </header>  
 <!--ここにあとでデータベース参照プログラム-->
   <ul>
-    
+    <% for(i=0;i<results.length;i++){ %>
+      <li><%- results[i].name %></li>
+    <% } %>
   </ul>
-<h3><button  onclick="location.href='yoyaku'">予約画面に戻る</button>
+<!-- h3><button  onclick="location.href='yoyaku'">予約画面に戻る</button>
+</h3>-->
+      <h3><!--<button  onclick="location.href='yoyaku'">予約画面に戻る</button>-->
+  <a href=/>予約画面に戻る</a>
 </h3>
 
 </div>
