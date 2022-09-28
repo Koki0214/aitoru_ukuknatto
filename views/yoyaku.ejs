@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アイトル</title>
+  <!-- コメントアウトの書き方 -->
+  <style>
+    html, body {
+        margin: 0 auto;
+        height: 100%;
+        background-color:#fff0f5;
+      }
+    .yoyakubutton
+    {
+    border-radius:10px;
+    width:223px;
+    height:65px;
+    background-color:#d9d9d9;
+    left:312px;
+    top:67px;
+    } 
+    .btn--orange,
+.btn {
+  color: #fff;
+  background-color: #eb6100;
+  
+}
+.btn:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+  </style>
+</head>
+<body>
+  
+  <table>
+    <% for(i=0;i<results.length;i++){ %>
+  <tr>
+    <td><%- results[i].name %></td>
+  
+ <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
+    
+
+    
+    <td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>
+    <td>
+      <a href=reservecheck/<%- results[i].id %>><%- results[i].id %></a>
+    </td>
+  </tr>
+      <% } %>
+  </table>
+  </div>
+   <!--以下ボタン-->
+  <script type="text/javascript">
+    function btnClick(reserve){
+      
+  var change=document.getElementById('reserve');
+      change.textContent
+       = '予約不可';
+      change.style.backround = '#ffcccc';
+      
+ 
+    }
+</script>
+
+</body>
+</html>
+
+
+　　
