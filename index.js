@@ -22,7 +22,7 @@ const db = new sqlite3.Database(dbfile);
 app.get('/',(req,res)=>res.sendFile(path.join(__dirname,'public/yoyaku.html')))
 //urlでreservecheckが指定された時、予約確認画面に遷移する
 app.get('/reservecheck',(req,res)=>res.sendFile(path.join(__dirname,'public/reservecheck.html')))
-//予約確認が
+//予約確認画面で、予約画面に戻るボタンを押された時、予約画面に遷移する
 app.get('/yoyaku',(req,res)=>res.sendFile(path.join(__dirname,'public/yoyaku.html')))
 
 app.listen(port, () => 
