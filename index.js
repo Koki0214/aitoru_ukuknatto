@@ -11,5 +11,6 @@ app.get('/',(req,res)=>res.sendFile(path.join(__dirname,'public/yoyaku.html')))
   //console.log(req);
   //res.send('<h3>Hello World!</h3><h1>アイトル</h1><h2>-技大用教室予約システム-</h2>');
 //});
+app.get('/reservecheck',(req,res)=>res.sendFile(path.join(__dirname,'public/reservecheck.html')))
 app.listen(port, () => 
   console.log('server started'));
