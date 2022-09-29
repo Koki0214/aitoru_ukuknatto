@@ -23,7 +23,7 @@
 .btn {
   color: #fff;
   background-color: #eb6100;
-  
+
 }
 .btn:hover,
 a.btn--orange:hover {
@@ -33,14 +33,13 @@ a.btn--orange:hover {
   </style>
 </head>
 <body>
-  
+
   <table>
     <% for(i=0;i<results.length;i++){ %>
   <tr>
     <td><%- results[i].name %></td>
-  
- <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
 
+ <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
     <!--<td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>-->
     <td>
       <a href=reservecheck/<%- results[i].id %>>予約する</a>
@@ -52,15 +51,15 @@ a.btn--orange:hover {
    <!--以下ボタン-->
     <!--<form>
         <button type="reserve">予約する</button>
-      </form>-->  
+      </form>-->
   <script type="text/javascript">
     function btnClick(reserve){
-      
+
   var change=document.getElementById('reserve');
       change.textContent
        = '予約不可';
       change.style.backround = '#ffcccc';
-      
+
  
     }
 </script>
@@ -68,6 +67,3 @@ a.btn--orange:hover {
 <a href=rireki>予約履歴確認</a>
 </body>
 </html>
-
-
-　　

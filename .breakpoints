@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "views/yoyaku.ejs": [
+      {
+        "id": "3fe9932e-6bf1-4bac-826a-4310977bb494",
+        "line": 11,
+        "version": 418,
+        "index": 183
+      }
+    ]
+  }
 }

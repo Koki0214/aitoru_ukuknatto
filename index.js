@@ -35,20 +35,40 @@ app.get('/',(req,res) => {
   })
 });
 
-app.get('/reservecheck/:id',(req,res)=> {
-  const id=req.params.id;
-  const query = "select name from book where id=?";
+//予約確認画面ページに渡す
+
+//app.get('/reservecheck/:id',(req,res)=> {
+  //const id=req.params.id;
+  //const query = "select name from book where id=?";
   
-  db.all(query,[id],(err,rows)=>{
+  //db.all(query,[id],(err,rows)=>{
+   // if(err){
+     // console.log(err.message);
+    //}
+    //res.render("reservecheck.ejs",{results:rows});
+  //})
+//});
+
+//予約確認画面ページに渡す(テスト)
+//
+app.get('/reservecheck/:id',(req,res)=> {
+  const id = req.params.id;//idの情報をurlから取得
+  const query = "UPDATE book SET status = 1 WHERE id = ? "
+  const query1 = "SELECT id,name FROM book WHERE id=?"
+  //↓ function 要らんの？db.serialize(function(){})　みたいな書き方だと思ってたんだけど←function()と()は同じ意味ー。
+  db.serialize(() => {
+  db.run(query,[id]);
+    db.all(query1,[id],(err,rows)=>{
     if(err){
       console.log(err.message);
     }
     res.render("reservecheck.ejs",{results:rows});
   })
 });
+});
 
 app.get('/rireki',(req,res)=> {
-  const query = "select name from book where status=0";
+  const query = "SELECT name FROM book WHERE status=1";
   
   db.all(query,(err,rows)=>{
     if(err){
@@ -57,6 +77,8 @@ app.get('/rireki',(req,res)=> {
     res.render("rireki.ejs",{results:rows});
   })
 });
+
+
 
 
 app.listen(port, () => 
