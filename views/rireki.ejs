@@ -10,6 +10,27 @@
         height: 100%;
         background-color:#fff0f5;
       }
+    h1{
+      font-size:200%
+      color: #000000;
+      text-align: center;
+      margin: auto;
+      padding: auto;
+    }
+    h2{
+      font-size:150%
+      color: #000000;
+      text-align: center;
+      margin: auto;
+      padding: auto;
+    }
+    h3{
+      font-size:100%
+      color: #000000;
+      text-align: center;
+      margin: auto;
+      padding: auto;
+    }
   </style>
 </head>
 <body>
@@ -20,13 +41,15 @@
 <!--ここにあとでデータベース参照プログラム-->
   <ul>
     <% for(i=0;i<results.length;i++){ %>
-      <li><%- results[i].name %></li>
+      <h1><li><%- results[i].name %></li><a href=cancel><h1>キャンセルする</h1></a></h1>
     <% } %>
   </ul>
 <!-- h3><button  onclick="location.href='yoyaku'">予約画面に戻る</button>
 </h3>-->
       <h3><!--<button  onclick="location.href='yoyaku'">予約画面に戻る</button>-->
-  <a href=/>予約画面に戻る</a>
+
+      
+<a href=/>予約画面に戻る</a>
 </h3>
 
 </div>

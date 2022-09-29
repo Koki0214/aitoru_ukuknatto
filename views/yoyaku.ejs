@@ -9,7 +9,23 @@
         margin: 0 auto;
         height: 100%;
         background-color:#fff0f5;
+           
       }
+    	h1{
+  font-size:200%;
+  color: #000000;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+h2{
+  font-size:150%;
+  color: #000000;
+  }
+h3{
+  font-size:100%;
+  color: #000000;
+}
     .yoyakubutton
     {
     border-radius:10px;
@@ -19,8 +35,7 @@
     left:312px;
     top:67px;
     } 
-    .btn--orange,
-.btn {
+    .btn--orange,.btn {
   color: #fff;
   background-color: #eb6100;
 
@@ -37,12 +52,12 @@ a.btn--orange:hover {
   <table>
     <% for(i=0;i<results.length;i++){ %>
   <tr>
-    <td><%- results[i].name %></td>
+   <td><h1><%- results[i].name %></h1></td>
 
  <!--  <td> <button onclick="location.href='reservecheck'" class="btn">テスト予約する</td>-->
     <!--<td><button id = reserve onclick="location.href='reservecheck'">予約する</button></td>-->
-    <td>
-      <a href=reservecheck/<%- results[i].id %>>予約する</a>
+    <td><h1 style="text-align:center"><font size="7">
+      <a href=reservecheck/<%- results[i].id %>>予約する</a></font></h1>
     </td>
   </tr>
       <% } %>
@@ -64,6 +79,6 @@ a.btn--orange:hover {
     }
 </script>
 <!--<button id = rireki onclick="location.href='rireki'">予約履歴確認</button>-->
-<a href=rireki>予約履歴確認</a>
+<a href=rireki><h1 style="text-align:center"><font size="7">予約履歴確認</font></h1></a>
 </body>
 </html>
