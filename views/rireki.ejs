@@ -41,7 +41,7 @@
 <!--ここにあとでデータベース参照プログラム-->
   <ul>
     <% for(i=0;i<results.length;i++){ %>
-      <h1><li><%- results[i].name %></li><a href=cancel><h1>キャンセルする</h1></a></h1>
+      <h1><li><%- results[i].name %><a href=cancel/<%- results[i].id %>>キャンセルする</a></li></h1>
     <% } %>
   </ul>
 <!-- h3><button  onclick="location.href='yoyaku'">予約画面に戻る</button>

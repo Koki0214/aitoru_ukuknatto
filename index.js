@@ -68,7 +68,7 @@ app.get('/reservecheck/:id',(req,res)=> {
 });
 
 app.get('/rireki',(req,res)=> {
-  const query = "SELECT name FROM book WHERE status=1";
+  const query = "SELECT id,name FROM book WHERE status=1";
   
   db.all(query,(err,rows)=>{
     if(err){
@@ -78,6 +78,23 @@ app.get('/rireki',(req,res)=> {
   })
 });
 
+
+app.get('/cancel/:id',(req,res)=> {
+  const id = req.params.id;
+  const query = "UPDATE book SET status = 0 where id = ?";
+  
+  const query1 = "SELECT id,name FROM book WHERE id=?"
+
+  db.serialize(() => {
+  db.run(query,[id]);
+    db.all(query1,[id],(err,rows)=>{
+    if(err){
+      console.log(err.message);
+    }
+    res.render("cancel.ejs",{results:rows});
+  })
+});
+});
 
 
 
